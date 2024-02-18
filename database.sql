@@ -2,7 +2,7 @@ CREATE DATABASE elemix;
 
 USE elemix;
 
-CREATE TABLE elements (
+CREATE TABLE combinations (
     id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     element_1 VARCHAR(250),
     subscript_1 INT(10),
@@ -12,7 +12,7 @@ CREATE TABLE elements (
     source VARCHAR(250)
 ) ;
 
-INSERT INTO elements (element_1, subscript_1, element_2, subscript_2, combination) VALUES 
+INSERT INTO combinations (element_1, subscript_1, element_2, subscript_2, combination) VALUES 
 ('N', 3, 'H', 1, 'NH3'),
 ('Al', 3, 'Br', -1, 'AlBr3'),
 ('Al', 3, 'Cl', -1, 'AlCl3'),
@@ -63,3 +63,43 @@ INSERT INTO elements (element_1, subscript_1, element_2, subscript_2, combinatio
 ('Cd', 2, 'Se', -2, 'CdSe'),
 ('Ti', 4, 'O', -2, 'TiO2'),
 ('Sb', 3, 'S', -2, 'Sb2S3');
+
+CREATE TABLE elements (
+    id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    symbol VARCHAR(250),
+    element_name VARCHAR(250)
+);
+
+
+INSERT INTO elements (symbol, element_name)
+VALUES
+('N', 'Nitrogen'),
+('H', 'Hydrogen'),
+('Al', 'Aluminum'),
+('Br', 'Bromine'),
+('Cl', 'Chlorine'),
+('O', 'Oxygen'),
+('F', 'Fluorine'),
+('S', 'Sulfur'),
+('I', 'Iodine'),
+('Ba', 'Barium'),
+('Ca', 'Calcium'),
+('C', 'Carbon'),
+('Cd', 'Cadmium'),
+('P', 'Phosphorus'),
+('K', 'Potassium'),
+('Se', 'Selenium'),
+('Na', 'Sodium'),
+('Ag', 'Silver'),
+('Sr', 'Strontium'),
+('Zn', 'Zinc'),
+('Fe', 'Iron'),
+('As', 'Arsenic'),
+('Mg', 'Magnesium'),
+('Ni', 'Nickel'),
+('Ti', 'Titanium'),
+('Co', 'Cobalt'),
+('Hg', 'Mercury'),
+('Pb', 'Lead');
+
+-- Add more elements if needed
