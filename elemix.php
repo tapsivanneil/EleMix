@@ -9,6 +9,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
+   <script src="js/script.js"> </script>
+
+    <title>Document</title>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>    
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -21,28 +26,29 @@
     </section>  
     <div class="container-fluid px-0">
         <form method="post" class="d-flex flex-column justify-content-center position-relative">              
-            <div class="d-flex justify-content-around align-items-center">  
+            <div class="d-flex justify-content-around align-items-center" id="combination_holder">  
                 <div class="element-container position-relative justify-content-center">
-                    <button class="element_btn " onclick="setElementFocus(1)" id="element_1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
+                    <button class="element_btn " onclick="setElementFocus(1)" name="element_1" id="element_1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
                         Na
                     </button>
-                    <input id="numberInput" type="number" class="position-absolute top-100 end-0 translate-middle rounded ps-2">
+                    <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle rounded ps-2">
                 </div>                
 
                 <div class="plus pb-3">+</div>
 
                 <div class="element-container position-relative">
-                    <button class="element_btn " onclick="setElementFocus(2)" id="element_2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
+                    <button class="element_btn " onclick="setElementFocus(2)" name="element_2" id="element_2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
                         Cl
                     </button>
-                    <input id="numberInput" type="number" class="position-absolute top-100 end-0 translate-middle rounded ps-2">
+                    <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle rounded ps-2">
                 </div>  
+                <input type="hidden" name="element_result" id="element_result">
             </div>           
                      
-            <input type="submit" value="MIX" class="mix-btn mt-5 mx-auto">           
+            <input type="submit"  name="submit_combine" value="MIX" class="mix-btn mt-5 mx-auto">           
         </form>
     
-        <div>image</div>
+        <div id="animation">image</div>
 
 <!-- offcanvas  -->
         <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -77,7 +83,7 @@
                             $element_symbol = $element['symbol'];
                             $element_name = $element['element_name'];
                             echo '
-                                <button onclick="setElementName(element_focus, \'' . $element_symbol . '\')" class="offcanvas-btn d-flex flex-column justify-content-center align-items-center mx-auto">
+                                <button onclick="setElementName(element_focus, \'' . $element_symbol . '\')"  getResult(); class="offcanvas-btn d-flex flex-column justify-content-center align-items-center mx-auto">
                                     <span class="symbol">' . $element_symbol . '</span>
                                     <span class="element-name">' . $element_name . '</span>
                                 </button>';
@@ -109,7 +115,46 @@
 
 </body>
 </html>
+<?php
+        $search_combination = isset($_POST['element_result']) ? $_POST['element_result'] : "";
+        $el_1 = isset($_POST['element_1']) ? $_POST['element_1'] : "";
+        $el_2 = isset($_POST['element_2']) ? $_POST['element_2'] : "";
+        $sub_1 = isset($_POST['subscript_1']) ? $_POST['subscript_1'] : "";
+        $sub_2 = isset($_POST['subscript_2']) ? $_POST['subscript_2'] : "";
 
+        
+
+        // need to change column name to source :> if animation is completed
+        $stmt = $link->prepare("SELECT combination FROM combinations WHERE combination = ?");
+        $stmt->bind_param('s', $search_combination);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if($result->num_rows > 0){
+            $element_res = $result->fetch_assoc();
+            $element_source = $element_res['combination'];
+
+            echo '<script>
+                var combination_holder = document.getElementById("combination_holder");
+                var animation_holder = document.getElementById("animation");
+                animation_holder.innerHTML = \''.$element_source.'\';
+
+                combination_holder.style.display = "none";
+            
+                </script>';
+
+
+        }
+        else{
+            echo '<script>
+                var animation_holder = document.getElementById("animation");
+                animation_holder.innerHTML = "NO SIMULATION";
+
+                
+
+            </script>';
+        }
+   ?>
 <!-- <button class="element_btn position-relative" onclick="setElementFocus(1)" id="element_1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
     Na
     <input id="numberInput" type="number" class="position-absolute top-100 start-100 translate-middle w-50 rounded h-50" onclick="stopPropagation(event);">
