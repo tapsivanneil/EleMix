@@ -27,7 +27,7 @@
                     <button class="element_btn " onclick="setElementFocus(1)" name="element_1" id="element_1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
                         Na
                     </button>
-                    <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle" placeholder="1">
+                    <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle" value="1">
                 </div>                
 
                 <div class="plus pb-3">+</div>
@@ -36,9 +36,12 @@
                     <button class="element_btn " onclick="setElementFocus(2)" name="element_2" id="element_2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
                         Cl
                     </button>
-                    <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle" placeholder="1">
+                    <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle" value="1">
                 </div>  
                 <input type="hidden" name="element_result" id="element_result">
+                <input type="hidden" name="element_1_search" id="element_1_search">
+                <input type="hidden" name="element_2_search" id="element_2_search">
+
             </div>           
                      
             <input type="submit"  name="submit_combine" value="MIX" class="mix-btn mt-5 mx-auto">           
@@ -59,7 +62,10 @@
                 <div class="button-container px-3 ">
                     <?php 
                     if(isset($_POST['element_submit'])){
-                        $element_search = isset($_POST['element']) ? $_POST['element'] : '';
+                        $element_1_search = isset($_POST['element_1_search']) ? $_POST['element_1_search'] : '';
+                        $element_2_search = isset($_POST['element_2_search']) ? $_POST['element_2_search'] : '';
+                        $subscript_1_search = isset($_POST['subscript_1']) ? $_POST['subscript_1'] : '';
+                        $subscript_2_search = isset($_POST['subscript_2']) ? $_POST['subscript_2'] : '';
 
                         $stmt = $link->prepare("SELECT * FROM elements WHERE element_name LIKE ? OR symbol LIKE ? ");
                         $likeParam = "%{$element_search}%";
@@ -91,7 +97,6 @@
             </div>
         </div>
     </div>
-   <script src="js/script.js"> </script>
    <script>
     $(document).ready(function () {
         $('#name_search').on('input', function () {
@@ -113,24 +118,36 @@
 </html>
 <?php
         $search_combination = isset($_POST['element_result']) ? $_POST['element_result'] : "";
-        $el_1 = isset($_POST['element_1']) ? $_POST['element_1'] : "";
-        $el_2 = isset($_POST['element_2']) ? $_POST['element_2'] : "";
+        $el_1 = isset($_POST['element_1_search']) ? $_POST['element_1_search'] : "";
+        $el_2 = isset($_POST['element_2_search']) ? $_POST['element_2_search'] : "";
         $sub_1 = isset($_POST['subscript_1']) ? $_POST['subscript_1'] : "";
         $sub_2 = isset($_POST['subscript_2']) ? $_POST['subscript_2'] : "";
+        //echo '<script>alert("'.$el_1 .' '.$el_2.'");</script>';
 
-        
 
         // need to change column name to source :> if animation is completed
-        $stmt = $link->prepare("SELECT combination FROM combinations WHERE combination = ?");
-        $stmt->bind_param('s', $search_combination);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        $stmt = $link->prepare("SELECT combination 
+                                FROM combinations 
+                                WHERE element_1 = ? 
+                                AND element_2 = ? 
+                                AND subscript_1 = ? 
+                                AND subscript_2 = ?");
+            $stmt->bind_param('ssii', $el_1, $el_2, $sub_1, $sub_2);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
         if($result->num_rows > 0){
             $element_res = $result->fetch_assoc();
             $element_source = $element_res['combination'];
 
             echo '<script>
+                var el_1 = document.getElementById("element_1");
+                var el_2 = document.getElementById("element_2");
+
+                el_1.innerText = "'.$el_1.'";
+                el_2.innerText = "'.$el_2.'";
+
+                
                 var combination_holder = document.getElementById("combination_holder");
                 var animation_holder = document.getElementById("animation");
                 animation_holder.innerHTML = \''.$element_source.'\';
@@ -142,6 +159,8 @@
 
         }
         else{
+            //catch null combinations
+            //echo "el_1: $el_1, el_2: $el_2, sub_1: $sub_1, sub_2: $sub_2<br>";
             echo '<script>
                 var animation_holder = document.getElementById("animation");
                 animation_holder.innerHTML = "NO SIMULATION";
