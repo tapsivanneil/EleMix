@@ -9,15 +9,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
-   <script src="js/script.js"> </script>
-
-    <title>Document</title>
+    <link rel="stylesheet" href="home.css">    
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>    
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="home.css">    
+    <script src="js/script.js"> </script>
     <title>EleMix</title>
 </head>
 <body>
@@ -31,7 +27,7 @@
                     <button class="element_btn " onclick="setElementFocus(1)" name="element_1" id="element_1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
                         Na
                     </button>
-                    <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle rounded ps-2">
+                    <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle" placeholder="1">
                 </div>                
 
                 <div class="plus pb-3">+</div>
@@ -40,7 +36,7 @@
                     <button class="element_btn " onclick="setElementFocus(2)" name="element_2" id="element_2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
                         Cl
                     </button>
-                    <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle rounded ps-2">
+                    <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle" placeholder="1">
                 </div>  
                 <input type="hidden" name="element_result" id="element_result">
             </div>           
@@ -58,7 +54,7 @@
                 </form>                   
             </div>
 
-            <div class="offcanvas-body position-relative pt-3 mb-3" id="liveSearchResults">                 
+            <div class="offcanvas-body position-relative pt-3 mb-2" id="liveSearchResults">                 
 
                 <div class="button-container px-3 ">
                     <?php 
