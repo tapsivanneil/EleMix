@@ -12,7 +12,7 @@
 <body class="container-fluid">
     <img src="assets/elemix logo.png" alt="">
     <div class="buttons">
-        <button onclick="window.location.href='home.php'">START</button>
+        <button onclick="window.location.href='elemix.php'">START</button>
         <button onclick="window.location.href='#'">GUIDE</button>
         <button onclick="window.location.href='#'">ABOUT</button>
     </div>    
