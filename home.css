@@ -32,7 +32,11 @@ input {
     width: 25%;
     height: 50%;
     text-align: center;
-    border-radius: 50%;
+    border-radius: 50%;    
+}
+#subscript_1,
+#subscript_2 {
+    text-align: center !important;
 }
 input.mix-btn , .element_btn {
     font-family: 'Chewy';
@@ -96,7 +100,7 @@ img {
 }
 .button-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+    grid-template-columns: repeat(3, 1fr); 
     column-gap: 4%;
     row-gap: 2%; 
 }
@@ -127,7 +131,7 @@ input#name_search {
     }
     .button-container {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 3 columns with equal width */
+        grid-template-columns: repeat(4, 1fr); 
         gap: 3%; 
     }
 }
@@ -159,7 +163,7 @@ input#name_search {
     }
     .button-container {
         display: grid;
-        grid-template-columns: repeat(5, 1fr); /* 3 columns with equal width */
+        grid-template-columns: repeat(5, 1fr); 
         gap: 3%; 
     }
 }
@@ -170,7 +174,7 @@ input#name_search {
     }
     .button-container {
         display: grid;
-        grid-template-columns: repeat(5, 1fr); /* 3 columns with equal width */
+        grid-template-columns: repeat(5, 1fr); 
         column-gap: 3%;
         row-gap: 4%; 
     }
@@ -188,7 +192,7 @@ input#name_search {
     }
     .button-container {
         display: grid;
-        grid-template-columns: repeat(6, 1fr); /* 3 columns with equal width */
+        grid-template-columns: repeat(6, 1fr); 
         column-gap: 2%;
         row-gap: 4%; 
     }
