@@ -17,7 +17,9 @@
     <title>EleMix</title>
 </head>
 <body>
-    <section class="mb-5">        
+    <section class="mb-5 position-relative">  
+        <!-- <span class="position-absolute translate-middle-x">&#8592;</span>       -->
+        <button class="position-absolute translate-middle-x" onclick="window.location.href='index.php'">🡠</button>      
         <img src="elemix logo.png" alt="">
     </section>  
     <div class="container-fluid px-0">
