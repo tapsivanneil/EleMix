@@ -35,9 +35,9 @@ body {
     background-color: #ba2d11;
 }
 img {
-    margin-bottom: 5%;
-    width: 90%;
-    height: 20%;
+    margin-bottom: 8%;
+    width: 100%;
+    height: 15%;
 }
 footer {
     position: fixed;
@@ -46,30 +46,55 @@ footer {
     height: 10%;
     background-color: red;
 }
-@media (min-width:768px) {
+@media (min-width:415px) {
+    img {
+        width: 95%;    
+        height: 20%;
+        margin-bottom: 3%;
+    }
+}
+@media (min-width:500px) {
+    img {
+        width: 90%;    
+    }
+}
+@media (min-width:600px) {
+    img {
+        width: 75%;    
+        height: 25%;
+    }
+}
+@media (min-width:700px){
     img {
         width: 75%;    
         height: 25%;
         margin-bottom: 3%;
     }
 }
-@media (min-width:768px) {
+@media (min-width:800px) {
     img {
-        width: 75%;    
+        width: 72%;    
         height: 25%;
         margin-bottom: 3%;
     }
 }
-@media (min-width:992px) {
+@media (min-width:900px) {
     img {
         width: 70%;    
         height: 30%;
         margin-bottom: 3%;
     }
 }
+@media (min-width:1024px) {
+    img {
+        width: 60%;    
+        height: 30%;
+        margin-bottom: 3%;
+    }
+}
 @media (min-width:1200px) {
     img {
-        width: 50%;    
+        width: 48%;    
         height: 30%;
         margin-bottom: 3%;
     }
