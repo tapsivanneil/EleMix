@@ -96,7 +96,7 @@ section {
 }
 img {    
     width: 30%;
-    height: 140%;
+    height: 100px;
 }
 .button-container {
     display: grid;
@@ -130,8 +130,8 @@ input::-webkit-inner-spin-button {
 }
 @media (min-width:450px) {
     img {
-        width: 20%;
-        height: 155%;     
+        width: 30%;
+        height: calc(150% + .3%);     
     }
     .button-container {
         display: grid;
@@ -145,8 +145,17 @@ input::-webkit-inner-spin-button {
         width: 18%;
         height: 50%;
     }
+    img {
+        width: 25%;
+        height: 155%;     
+    }
 }
+
 @media (min-width:600px) {
+    img {
+        width: 22%;
+        height: 160%;     
+    }
     input {
         left: 71%;
         width: 15%;
@@ -158,24 +167,33 @@ input::-webkit-inner-spin-button {
         left: 71%;
         width: 13%;
         height: 50%;
+    }    
+    img {
+        width: 20%;
+        height: 165%;     
     }
 }
 @media (min-width:768px) {
-    img {
-        width: 20%;
-        height: 155%;     
-    }
+
     .button-container {
         display: grid;
         grid-template-columns: repeat(5, 1fr); 
         gap: 3%; 
     }
 }
-@media (min-width:992px) {
+@media (min-width:800px) {  
+    img {
+        width: 18%;
+        height: 170%;     
+    }
+}
+@media (min-width:900px) {  
     img {
         width: 16%;
-        height: 180%;     
+        height: 175%;     
     }
+}
+@media (min-width:992px) {
     .button-container {
         display: grid;
         grid-template-columns: repeat(5, 1fr); 
@@ -192,7 +210,7 @@ input::-webkit-inner-spin-button {
 @media (min-width:1200px) {
     img {
         width: 12%;
-        height: 180%;     
+        height: 185%;     
     }
     .button-container {
         display: grid;
