@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Chewy';
-    src: url('assets/Chewy-Regular.woff') format('woff'),
-         url('assets/Chewy-Regular.woff2') format('woff2'),;
+    src: url('assets/font/Chewy-Regular.woff') format('woff'),
+         url('assets/font/Chewy-Regular.woff2') format('woff2'),;
 }
 html, body {
     position: relative;
