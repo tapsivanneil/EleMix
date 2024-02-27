@@ -20,11 +20,11 @@
     <section class="mb-5 position-relative">  
         <!-- <span class="position-absolute translate-middle-x">&#8592;</span>       -->
         <a class="position-absolute translate-middle-x" id="back_button" href="index.php">🡠</a>      
-        <img src="elemix logo.png" alt="">
+        <img src="assets/image/elemix logo.png" alt="">
     </section>  
     <div class="container-fluid px-0">
         <div class="row p-0 m-0" >
-            <div class="col-lg-6 p-0" id="controls">
+            <div class="col-lg-6 p-0 mb-5" id="controls">
                 <form method="post" class="d-flex flex-column justify-content-center position-relative">              
                     <div class="d-flex justify-content-around align-items-center" id="combination_holder">  
                         <div class="element-container position-relative justify-content-center">
@@ -51,9 +51,9 @@
                     <input type="submit"  name="submit_combine" value="MIX" class="mix-btn mt-5 mx-auto">           
                 </form>
             </div>
-            <div class="col-lg-6 p-0 m-0 d-flex"> 
+            <div class="col-lg-6 p-0 m-0 d-flex justify-content-center align-items-center"> 
                 <!-- <div></div> -->
-                <img src="#"  id="animation" alt="" class="animation m-0 p-0 mt-5">
+                <img src="assets/image/beaker.png"  id="animation" alt="" class="animation m-0 p-0 mt-5 h-100 w-50">
             </div>
         </div>
     </div>           
