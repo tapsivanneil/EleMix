@@ -16,13 +16,13 @@
     <script src="js/script.js"> </script>
     <title>EleMix</title>
 </head>
-<body class="p-0 m-0">
-    <section class="mb-5 position-relative">  
+<body class="p-0 m-0 position-relative">
+    <section class=" position-relative">  
         <!-- <span class="position-absolute translate-middle-x">&#8592;</span>       -->
-        <a class="position-absolute translate-middle-x" id="back_button" href="index.php">🡠</a>      
+        <a class="position-absolute translate-middle-x" id="back_button" href="index.php" style="text-decoration:none;">🡠</a>      
         <img src="assets/image/elemix logo.png" alt="">
     </section>  
-    <div class="container-fluid px-0">
+    <div class="container-fluid px-0 position-absolute translate-middle-y start-25 top-50">
         <div class="row p-0 m-0" >
             <div class="col-lg-6 p-0 mb-5" id="controls">
                 <form method="post" class="d-flex flex-column justify-content-center position-relative">              
@@ -53,7 +53,7 @@
             </div>
             <div class="col-lg-6 p-0 m-0 d-flex justify-content-center align-items-center"> 
                 <!-- <div></div> -->
-                <img src="assets/image/beaker.png"  id="animation" alt="" class="animation m-0 p-0 mt-5 h-100 w-50">
+                <img src="assets/image/beaker.png"  id="animation" alt="" class="animation m-0 p-0 h-100 w-50">
             </div>
         </div>
     </div>           
