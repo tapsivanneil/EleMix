@@ -16,7 +16,7 @@
     <script src="js/script.js"> </script>
     <title>EleMix</title>
 </head>
-<body class="p-0">
+<body class="p-0 m-0">
     <section class="mb-5 position-relative">  
         <!-- <span class="position-absolute translate-middle-x">&#8592;</span>       -->
         <button class="position-absolute translate-middle-x" onclick="window.location.href='index.php'">🡠</button>      
@@ -51,8 +51,9 @@
                     <input type="submit"  name="submit_combine" value="MIX" class="mix-btn mt-5 mx-auto">           
                 </form>
             </div>
-            <div class="col-lg-6 p-0"> 
-                <div id="animation">image</div>
+            <div class="col-lg-6 p-0 m-0 d-flex"> 
+                <!-- <div id="animation"></div> -->
+                <img src="assets/nacl.gif" alt="" class="animation m-0 p-0 mt-5">
             </div>
         </div>
     </div>           
