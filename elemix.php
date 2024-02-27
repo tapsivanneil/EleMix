@@ -19,7 +19,7 @@
 <body class="p-0 m-0">
     <section class="mb-5 position-relative">  
         <!-- <span class="position-absolute translate-middle-x">&#8592;</span>       -->
-        <button class="position-absolute translate-middle-x" onclick="window.location.href='index.php'">🡠</button>      
+        <a class="position-absolute translate-middle-x" id="back_button" href="index.php">🡠</a>      
         <img src="elemix logo.png" alt="">
     </section>  
     <div class="container-fluid px-0">
@@ -160,6 +160,10 @@
                 console.log("'.$element_source.'");
                 var animation_holder = document.getElementById("animation");
                 animation_holder.src =  "'.$element_source.'";
+                
+                var back_button = document.getElementById("back_button");
+                back_button.href =  "elemix.php";
+                
                 </script>';
 
 
