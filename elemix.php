@@ -17,8 +17,7 @@
     <title>EleMix</title>
 </head>
 <body class="p-0 m-0">
-    <section class="mb-5 position-relative">  
-        <!-- <span class="position-absolute translate-middle-x">&#8592;</span>       -->
+    <section class="mb-5 position-relative">          
         <button class="position-absolute translate-middle-x" onclick="window.location.href='index.php'">🡠</button>      
         <img src="elemix logo.png" alt="">
     </section>  
@@ -178,11 +177,3 @@
             </script>';
         }
    ?>
-<!-- <button class="element_btn position-relative" onclick="setElementFocus(1)" id="element_1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
-    Na
-    <input id="numberInput" type="number" class="position-absolute top-100 start-100 translate-middle w-50 rounded h-50" onclick="stopPropagation(event);">
-</button>                 -->
-<!-- <button class="element_btn position-relative" onclick="setElementFocus(2)" id="element_2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
-    Cl
-    <input type="number" class="position-absolute top-100 start-100 translate-middle w-50 rounded h-50" onclick="stopPropagation(event);">
-</button> -->
