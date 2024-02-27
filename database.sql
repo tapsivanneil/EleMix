@@ -9,60 +9,22 @@ CREATE TABLE combinations (
     element_2 VARCHAR(250),
     subscript_2 INT(10),
     combination VARCHAR(250),
+    combination_name VARCHAR(250),
     source VARCHAR(250)
 ) ;
 
-INSERT INTO combinations (element_1, subscript_1, element_2, subscript_2, combination) VALUES 
-('N', 3, 'H', 1, 'NH3'),
-('Al', 3, 'Br', -1, 'AlBr3'),
-('Al', 3, 'Cl', -1, 'AlCl3'),
-('Al', 3, 'O', -2, 'Al2O3'),
-('Al', 3, 'F', -1, 'AlF3'),
-('Al', 3, 'S', -2, 'Al2S3'),
-('Al', 3, 'I', -1, 'AlI3'),
-('Ba', 2, 'O', -2, 'BaO'),
-('Ba', 2, 'I', -1, 'BaI2'),
-('Ba', 2, 'F', -1, 'BaF2'),
-('Ba', 2, 'Cl', -1, 'BaCl2'),
-('Ba', 2, 'Br', -1, 'BaBr2'),
-('Ca', 2, 'H', 1, 'CaH2'),
-('Ca', 2, 'I', -1, 'CaI2'),
-('Ca', 2, 'O', -2, 'CaO'),
-('Ca', 2, 'Br', -1, 'CaBr2'),
-('Ca', 2, 'Cl', -1, 'CaCl2'),
-('C', 4, 'S', -2, 'CS2'),
-('C', 2, 'O', -2, 'CO'),
-('Cd', 2, 'S', -2, 'CdS'),
-('H', 1, 'Cl', -1, 'HCl'),
-('P', -3, 'Cl', -1, 'PCl3'),
-('K', 1, 'I', -1, 'KI'),
-('K', 1, 'F', -1, 'KF'),
-('K', 1, 'Cl', -1, 'KCl'),
-('K', 1, 'Br', -1, 'KBr'),
-('Se', 4, 'O', -2, 'SeO2'),
-('Na', 1, 'Br', -1, 'NaBr'),
-('Na', 1, 'Cl', -1, 'NaCl'),
-('Na', 1, 'S', -2, 'Na2S'),
-('Na', 1, 'O', -2, 'Na2O'),
-('Ag', 1, 'Cl', -1, 'AgCl'),
-('Sr', 2, 'Cl', -1, 'SrCl2'),
-('Zn', 2, 'Br', -1, 'ZnBr2'),
-('Fe', 3, 'O', -2, 'Fe2O3'),
-('H', 1, 'O', -2, 'H2O'),
-('As', 3, 'S', 2, 'As2S3'),
-('Mg', 2, 'Cl', 1, 'MgCl2'),
-('H', 1, 'F', -1, 'HF'),
-('H', 1, 'S', 2, 'H2S'),
-('N', 2, 'O', -2, 'NO2'),
-('Ni', 2, 'O', -2, 'NiO'),
-('Zn', 2, 'O', -2, 'ZnO'),
-('Ag', 1, 'S', -2, 'Ag2S'),
-('Co', 2, 'Cl', 1, 'CoCl2'),
-('Hg', 2, 'O', -2, 'HgO'),
-('Pb', 2, 'I', 1, 'PbI2'),
-('Cd', 2, 'Se', -2, 'CdSe'),
-('Ti', 4, 'O', -2, 'TiO2'),
-('Sb', 3, 'S', -2, 'Sb2S3');
+INSERT INTO combinations (element_1, subscript_1, element_2, subscript_2, combination, combination_name, source) VALUES 
+('N', 3, 'H', 1, 'NH3', 'Ammonia', 'assets/gif/NH3.gif'), -- 5
+('Al', 3, 'Br', -1, 'AlBr3', 'Aluminum Bromide', 'assets/gif/AlBr3.gif'), -- 7
+('Cd', 1, 'S', -1, 'CdS', 'Cadium Sulfide', 'assets/gif/CdS.gif'), -- 9
+('H', 1, 'Cl', -1, 'HCl', 'Hydrochloric Acid', 'assets/gif/HCl.gif'), -- 4
+('Na', 1, 'Cl', -1, 'NaCl', 'Sodium Chloride', 'assets/gif/NaCl.gif'), -- 1
+('Ag', 1, 'Cl', -1, 'AgCl', 'Silver Chloride', 'assets/gif/AgCl.gif'), -- 10
+('Hg', 2, 'O', -2, 'HgO', 'Mercuric Oxide', 'assets/gif/HgO.gif'), -- 2
+('Pb', 2, 'I', 1, 'PbI2', 'Lead Iodide', 'assets/gif/PbI2.gif'), -- 3
+('N', 2, 'Cl', -1, 'NiCl2', 'Nickel Chloride', 'assets/gif/NiCl2.gif'), --8
+('P', 5, 'Br', -1, 'PBr5', 'Phosporus Pentabromide', 'assets/gif/PBr5.gif'); -- 6
+
 
 CREATE TABLE elements (
     id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
