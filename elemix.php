@@ -31,7 +31,7 @@
                             <button class="element_btn " onclick="setElementFocus(1)" name="element_1" id="element_1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
                                 Na
                             </button>
-                            <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle text-center" value="1">
+                            <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1" value="1">
                         </div>                
 
                         <div class="plus pb-3">+</div>
@@ -40,7 +40,7 @@
                             <button class="element_btn " onclick="setElementFocus(2)" name="element_2" id="element_2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
                                 Cl
                             </button>
-                            <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle" value="-1">
+                            <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1" value="-1">
                         </div>  
                         <input type="hidden" name="element_result" id="element_result">
                         <input type="hidden" name="element_1_search" id="element_1_search" value="Na">
@@ -53,9 +53,12 @@
             </div>
             <div class="col-lg-6 p-0 m-0 d-flex justify-content-center align-items-center"> 
                 <!-- <div></div> -->
-                <img src="assets/image/beaker.png"  id="animation" alt="" class="animation m-0 p-0 h-100 w-50">
+                <img src="assets/image/beaker.png" alt="" id="beaker" class="animation m-0 p-0 h-100 w-50">
             </div>
         </div>
+        <section class="position-relative">
+            <img src="" id="animation" alt="" class="m-0 p-0 position-absolute translate-middle start-50 top-75">
+        </section>
     </div>           
 
 <!-- offcanvas  -->
@@ -150,6 +153,9 @@
             echo '<script>
                 var controls = document.getElementById("controls");
                 controls.style.display = "none";
+                
+                var beaker = document.getElementById("beaker");
+                beaker.style.display = "none";
 
                 var el_1 = document.getElementById("element_1");
                 var el_2 = document.getElementById("element_2");
@@ -159,6 +165,7 @@
 
                 console.log("'.$element_source.'");
                 var animation_holder = document.getElementById("animation");
+                animation_holder.style.display = "inline";
                 animation_holder.src =  "'.$element_source.'";
                 
                 var back_button = document.getElementById("back_button");
