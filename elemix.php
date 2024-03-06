@@ -148,7 +148,7 @@
         // need to change column name to source :> if animation is completed
         if($result->num_rows > 0){
             $element_res = $result->fetch_assoc();
-            $element_source = $element_res['source'];
+            $element_source =  strtolower($element_res['source']) ;
 
             echo '<script>
                 var controls = document.getElementById("controls");
