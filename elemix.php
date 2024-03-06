@@ -16,13 +16,16 @@
     <script src="js/script.js"> </script>
     <title>EleMix</title>
 </head>
-<body class="p-0 m-0 position-relative">
-    <section class=" position-relative">  
+<body class="p-0 m-0 position-relative d-flex flex-column ">
+    <section class="fixed-top position-relative">  
         <!-- <span class="position-absolute translate-middle-x">&#8592;</span>       -->
         <a class="position-absolute translate-middle-x" id="back_button" href="index.php" style="text-decoration:none;">🡠</a>      
         <img src="assets/image/elemix logo.png" alt="">
     </section>  
-    <div class="container-fluid px-0 position-absolute translate-middle-y start-25 top-50">
+    <section class="position-relative d-flex justify-content-center align-items-center" id="animation_container">
+        <img src="" id="animation" alt="" class="m-0 p-0 ">
+    </section>
+    <div class="container-fluid px-0 position-absolute translate-middle-y start-25 top-50"> <!--position-absolute translate-middle-y start-25 top-50-->
         <div class="row p-0 m-0" >
             <div class="col-lg-6 p-0 mb-5" id="controls">
                 <form method="post" class="d-flex flex-column justify-content-center position-relative">              
@@ -56,9 +59,6 @@
                 <img src="assets/image/beaker.png" alt="" id="beaker" class="animation m-0 p-0 h-100 w-50">
             </div>
         </div>
-        <section class="position-relative">
-            <img src="" id="animation" alt="" class="m-0 p-0 position-absolute translate-middle start-50 top-75">
-        </section>
     </div>           
 
 <!-- offcanvas  -->
@@ -156,6 +156,9 @@
                 
                 var beaker = document.getElementById("beaker");
                 beaker.style.display = "none";
+                
+                document.getElementById("animation_container").style.width="100%";
+                document.getElementById("animation_container").style.height="90%";
 
                 var el_1 = document.getElementById("element_1");
                 var el_2 = document.getElementById("element_2");
@@ -163,7 +166,8 @@
                 el_1.innerText = "'.$el_1.'";
                 el_2.innerText = "'.$el_2.'";
 
-                console.log("'.$element_source.'");
+                console.log("'.$element_source.'");  
+
                 var animation_holder = document.getElementById("animation");
                 animation_holder.style.display = "inline";
                 animation_holder.src =  "'.$element_source.'";
