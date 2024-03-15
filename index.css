@@ -41,7 +41,11 @@ img {
     margin-bottom: 8%;
     width: 100%;
     height: 15%;
-    animation: myAnim .7s ease 0s 1 normal forwards;
+    transition: .2s ease-in 0s 1 normal;
+    animation: myAnim .7s ease-in-out 0s 1 normal forwards;
+}
+img:hover {
+    transform: scale(1.15) !important;
 }
 footer {
     position: fixed;

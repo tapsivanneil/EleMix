@@ -62,6 +62,8 @@ input.mix-btn {
   width: 30%;
   height: 100%;
   font-size: 200%;
+  padding: 0%;
+  transition: .2s ease-in 0s;
 }
 
 .offcanvas-btn {
@@ -86,6 +88,11 @@ input.mix-btn {
 .buttons button:hover,
 input[type="submit"]:hover {
   background-color: #ba2d11;
+}
+input[type="submit"]:hover {
+  background-color: #ba2d11;
+  cursor: pointer;
+  transform: scale(1.25);
 }
 section {
   width: 100%;
