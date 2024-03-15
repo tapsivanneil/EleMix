@@ -14,6 +14,8 @@ body {
   position: relative;
   width: 100% !important;
   height: 100% !important;
+  min-height: 600px;
+  min-width: 340px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,18 +28,20 @@ body {
   align-items: center;
   position: relative;
 }
-input {
+#subscript_1,
+#subscript_2  {
   z-index: 1000 !important;
   font-family: "Chewy";
   font-size: 130%;
-  width: 25%;
+  width: 24%;
   height: 50%;
   text-align: center;
-  border-radius: 50%;
+  border-radius: 50% !important;
 }
 #subscript_1,
 #subscript_2 {
   text-align: center !important;
+  border-radius: 50% !important;
 }
 input.mix-btn,
 .element_btn {
@@ -47,7 +51,7 @@ input.mix-btn,
   background-color: #e73813;
   width: 45%;
   height: 45%;
-  border-radius: 15px;
+  border-radius: 15px !important;
   border: none;
 }
 
@@ -135,11 +139,13 @@ input::-webkit-inner-spin-button {
   width: 80%;
   height: 80%;
 }
-section:nth-child(even) {
+#animation_container {
   background-color: transparent !important;
-  display:block;
+  display: none;
 }
-
+.preface {
+  height: 90%;
+}
 /* Media queries */
 
 @media (min-width: 414px) {
@@ -159,6 +165,10 @@ section:nth-child(even) {
     grid-template-columns: repeat(4, 1fr);
     gap: 3%;
   }
+  #subscript_1,
+  #subscript_2 {
+    width: 18%;
+  }
 }
 @media (min-width: 500px) {
   input {
@@ -169,6 +179,10 @@ section:nth-child(even) {
   img {
     width: 25%;
     height: 155%;
+  }
+  #subscript_1,
+  #subscript_2 {
+    width: 16%;
   }
 }
 
@@ -186,6 +200,10 @@ section:nth-child(even) {
     width: 70%;
     height: 80%;
   }
+  #subscript_1,
+  #subscript_2 {
+    width: 14%;
+  }
 }
 @media (min-width: 700px) {
   input {
@@ -200,6 +218,10 @@ section:nth-child(even) {
   #animation {
     width: 60%;
     height: 80%;
+  }
+  #subscript_1,
+  #subscript_2 {
+    width: 12%;
   }
 }
 @media (min-width: 768px) {
@@ -218,6 +240,10 @@ section:nth-child(even) {
     width: 50%;
     height: 80%;
   }
+  #subscript_1,
+  #subscript_2 {
+    width: 10%;
+  }
 }
 @media (min-width: 900px) {
   img {
@@ -228,6 +254,10 @@ section:nth-child(even) {
     width: 40%;
     height: 80%;
   }
+  #subscript_1,
+  #subscript_2 {
+    width: 10%;
+  }
 }
 @media (min-width: 992px) {
   .button-container {
@@ -236,15 +266,23 @@ section:nth-child(even) {
     column-gap: 3%;
     row-gap: 4%;
   }
+  #subscript_1,
+  #subscript_2 {
+    width: 17%;
+  }
 }
 @media (min-width: 1024px) {
   img {
-    width: 15%;
+    width: 20%;
     height: 180%;
   }
   #animation {
     width: 35%;
     height: 85%;
+  }
+  #subscript_1,
+  #subscript_2 {
+    width: 16%;
   }
 }
 @media (min-width: 1200px) {
@@ -259,7 +297,11 @@ section:nth-child(even) {
     row-gap: 4%;
   }
   #animation {
-    width: 30%;
+    width: 25%;
     height: 85%;
+  }
+  #subscript_1,
+  #subscript_2 {
+    width: 11%;
   }
 }

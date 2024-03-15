@@ -22,44 +22,46 @@
         <a class="position-absolute translate-middle-x" id="back_button" href="index.php" style="text-decoration:none;">🡠</a>      
         <img src="assets/image/elemix logo.png" alt="">
     </section>  
-    <section class="position-relative d-flex justify-content-center align-items-center" id="animation_container">
-        <img src="" id="animation" alt="" class="m-0 p-0 ">
-    </section>
-    <div class="container-fluid px-0 position-absolute translate-middle-y start-25 top-50"> <!--position-absolute translate-middle-y start-25 top-50-->
-        <div class="row p-0 m-0" >
-            <div class="col-lg-6 p-0 mb-5" id="controls">
-                <form method="post" class="d-flex flex-column justify-content-center position-relative">              
-                    <div class="d-flex justify-content-around align-items-center" id="combination_holder">  
-                        <div class="element-container position-relative justify-content-center">
-                            <button class="element_btn " onclick="setElementFocus(1)" name="element_1" id="element_1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
-                                Na
-                            </button>
-                            <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1" value="1">
-                        </div>                
-
-                        <div class="plus pb-3">+</div>
-
-                        <div class="element-container position-relative">
-                            <button class="element_btn " onclick="setElementFocus(2)" name="element_2" id="element_2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
-                                Cl
-                            </button>
-                            <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1" value="-1">
-                        </div>  
-                        <input type="hidden" name="element_result" id="element_result">
-                        <input type="hidden" name="element_1_search" id="element_1_search" value="Na">
-                        <input type="hidden" name="element_2_search" id="element_2_search" value="Cl">
-
-                    </div>           
-                            
-                    <input type="submit"  name="submit_combine" value="MIX" class="mix-btn mt-5 mx-auto">           
-                </form>
+    <div class="position-relative preface d-flex justify-content-center align-items-center">
+        <section class="position-relative d-flex justify-content-center align-items-center" id="animation_container">
+            <img src="" id="animation" alt="" class="m-0 p-0 ">
+        </section>
+        <div class="container-fluid px-0 position-absolute translate-middle-y start-25 top-50 "> <!--position-absolute translate-middle-y start-25 top-50-->
+            <div class="row p-0 m-0 h-100">
+                <div class="col-lg-6 p-0 mb-5" id="controls">
+                    <form method="post" class="d-flex flex-column justify-content-center position-relative">              
+                        <div class="d-flex justify-content-around align-items-center" id="combination_holder">  
+                            <div class="element-container position-relative justify-content-center">
+                                <button class="element_btn " onclick="setElementFocus(1)" name="element_1" id="element_1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
+                                    Na
+                                </button>
+                                <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1 rounded-circle" value="1">
+                            </div>                
+    
+                            <div class="plus pb-3">+</div>
+    
+                            <div class="element-container position-relative">
+                                <button class="element_btn " onclick="setElementFocus(2)" name="element_2" id="element_2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
+                                    Cl
+                                </button>
+                                <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1 rounded-circle" value="-1">
+                            </div>  
+                            <input type="hidden" name="element_result" id="element_result">
+                            <input type="hidden" name="element_1_search" id="element_1_search" value="Na">
+                            <input type="hidden" name="element_2_search" id="element_2_search" value="Cl">
+    
+                        </div>           
+                                
+                        <input type="submit"  name="submit_combine" value="MIX" class="mix-btn mt-5 mx-auto">           
+                    </form>
+                </div>
+                <div class="col-lg-6 p-0 m-0 d-flex justify-content-center align-items-center"> 
+                    <!-- <div></div> -->
+                    <img src="assets/image/beaker.png" alt="" id="beaker" class="animation m-0 p-0 h-100 w-50">
+                </div>
             </div>
-            <div class="col-lg-6 p-0 m-0 d-flex justify-content-center align-items-center"> 
-                <!-- <div></div> -->
-                <img src="assets/image/beaker.png" alt="" id="beaker" class="animation m-0 p-0 h-100 w-50">
-            </div>
-        </div>
-    </div>           
+        </div>           
+    </div>
 
 <!-- offcanvas  -->
         <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -150,7 +152,7 @@
             $element_res = $result->fetch_assoc();
             $element_source =  strtolower($element_res['source']) ;
 
-            echo '<script>
+            echo '<script>                
                 var controls = document.getElementById("controls");
                 controls.style.display = "none";
                 
@@ -158,7 +160,7 @@
                 beaker.style.display = "none";
                 
                 document.getElementById("animation_container").style.width="100%";
-                document.getElementById("animation_container").style.height="90%";
+                document.getElementById("animation_container").style.height="100%";
 
                 var el_1 = document.getElementById("element_1");
                 var el_2 = document.getElementById("element_2");
@@ -183,7 +185,7 @@
             //catch null combinations
             //echo "el_1: $el_1, el_2: $el_2, sub_1: $sub_1, sub_2: $sub_2<br>";
             echo '<script>
-                
+
             </script>';
         }
    ?>
