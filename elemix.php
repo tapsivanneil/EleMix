@@ -66,8 +66,8 @@
 <!-- offcanvas  -->
         <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header d-flex">
-                <form method="post" class="px-3" style="width: 100%;">
-                    <input type="text" name="element" placeholder="Search element" class="rounded border-0 bg-secondary-subtle p-3" id="name_search" style="width: 100%;">                    
+                <form method="post" class="px-3 " style="width: 100%;">
+                    <input type="text" name="element" placeholder="Search element" class="rounded border-0 bg-secondary-subtle p-3 text-center" id="name_search" style="width: 100%;">                    
                 </form>                   
             </div>
 
