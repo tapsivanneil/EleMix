@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.min.js">
+    <link rel="icon" sizes="180x180" href="assets/favicon/favicon.ico">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>    
     <link rel="stylesheet" href="index.css">
     <title>EleMix</title>
