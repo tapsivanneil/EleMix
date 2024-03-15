@@ -38,6 +38,9 @@ body {
   text-align: center;
   border-radius: 50% !important;
 }
+input {
+  font-family: 'Chewy';
+}
 #subscript_1,
 #subscript_2 {
   text-align: center !important;
