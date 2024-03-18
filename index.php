@@ -15,7 +15,7 @@
     <img src="assets/image/elemix logo-crp.png" alt="">
     <div class="buttons">
         <button onclick="window.location.href='elemix.php'">START</button>        
-        <button onclick="window.location.href='#'">ABOUT</button>
+        <button onclick="window.location.href='about.php'">ABOUT</button>
     </div>    
     <footer></footer>
 </body>
