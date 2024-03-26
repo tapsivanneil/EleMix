@@ -34,7 +34,7 @@
                         <div class="d-flex justify-content-around align-items-center" id="combination_holder">  
                             <div class="element-container position-relative justify-content-center">
                                 <button class="element_btn " onclick="setElementFocus(1)" name="element_1" id="element_1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
-                                    Na
+                                    Cd
                                 </button>
                                 <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1 rounded-circle" value="1">
                             </div>                
@@ -43,13 +43,13 @@
     
                             <div class="element-container position-relative">
                                 <button class="element_btn " onclick="setElementFocus(2)" name="element_2" id="element_2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
-                                    Cl
+                                    S
                                 </button>
                                 <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1 rounded-circle" value="-1">
                             </div>  
                             <input type="hidden" name="element_result" id="element_result">
-                            <input type="hidden" name="element_1_search" id="element_1_search" value="Na">
-                            <input type="hidden" name="element_2_search" id="element_2_search" value="Cl">
+                            <input type="hidden" name="element_1_search" id="element_1_search" value="Cd">
+                            <input type="hidden" name="element_2_search" id="element_2_search" value="S">
     
                         </div>           
                                 
@@ -174,6 +174,8 @@
                 var animation_holder = document.getElementById("animation");
                 animation_holder.style.display = "inline";
                 animation_holder.src =  "'.$element_source.'";
+                animation_holder.alt =  "'.$element_source.'";
+
                 
                 var back_button = document.getElementById("back_button");
                 back_button.href =  "elemix.php";
@@ -184,7 +186,7 @@
         }
         else{
             //catch null combinations
-            //echo "el_1: $el_1, el_2: $el_2, sub_1: $sub_1, sub_2: $sub_2<br>";
+            echo "el_1: $el_1, el_2: $el_2, sub_1: $sub_1, sub_2: $sub_2<br>";
             echo '<script>
 
             </script>';
