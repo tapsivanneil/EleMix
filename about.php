@@ -22,12 +22,16 @@
     </section>  
 
 
-    <div class=" preface d-flex justify-content-center align-items-center" style="Margin: 10%; Font-family: Arial; ">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu mollis urna, nec varius felis. Quisque placerat efficitur laoreet. Nullam dignissim, odio vitae mollis venenatis, arcu arcu rutrum nibh, non lobortis tellus risus ut risus. Duis accumsan tempus purus sed suscipit. Etiam vel ante at risus semper sollicitudin non semper nisi. Quisque quis ante vitae leo lacinia viverra id et justo. Donec est turpis, pulvinar a imperdiet id, consequat non turpis. Praesent turpis metus, dictum at risus vel, feugiat pellentesque nulla.
+    <div class=" preface d-flex justify-content-center align-items-center" style="Margin: 10%; Font-family: Arial; text-align: center">
+    Welcome to Elemix, where science and innovation converge! Step into a virtual laboratory experience like never before, meticulously designed to revolutionize STEM education for students at General Mariano Alvarez Technical High School.
 
-Morbi malesuada, quam at dictum efficitur, ipsum dui placerat dolor, ac posuere lacus libero in nisl. Fusce tristique tempor cursus. Praesent molestie leo eget lorem lobortis pulvinar vitae vitae nisl. Fusce ornare, mauris eget scelerisque molestie, massa velit viverra lectus, eget suscipit mi ex et libero. Donec non nibh risus. Curabitur a nunc eu nunc elementum aliquet. Nullam sit amet laoreet diam. Nunc feugiat libero et ipsum aliquam, a mollis dui consectetur. Aliquam ultrices fermentum efficitur. Praesent consequat tristique libero, at fringilla enim. Etiam sed efficitur diam. Etiam iaculis turpis elit, id tempus turpis pharetra in. Curabitur placerat nec diam a placerat.
+<br> <br>Elemix is more than just a platform; it's a dynamic creation by the brilliant minds of the 12-Wagayway batch 2023-2024. With a vision in mind to bridge the gap imposed by traditional laboratory constraints and usher in a new era of exploration.
 
-Pellentesque congue justo nec iaculis ornare. Cras dictum mauris tellus, at molestie felis mollis vitae. Nulla convallis neque tincidunt molestie vestibulum. Duis eget nunc in urna rhoncus mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac libero venenatis justo tempus faucibus. Quisque tempus, lorem eget tempor dignissim, tellus enim imperdiet odio, eget pellentesque leo sapien ut dui. Morbi rutrum lacinia odio quis posuere. Sed tincidunt risus nec arcu maximus, nec rutrum tellus hendrerit. Phasellus efficitur, leo ut consectetur luctus, arcu lorem auctor nisl, sit amet hendrerit quam mi vitae magna. Praesent nec est posuere arcu suscipit lobortis. Fusce quis fermentum nibh. Nam non tristique nisl.
+<br> <br>At Elemix, we live by the mantra of igniting curiosity, fostering exploration, and empowering the next generation of STEM students. Join us as we redefine the classroom landscape and embark on a journey to enhance the quality of STEM education.
+
+<br> <br>Whether you're concocting compounds, conducting experiments, or unraveling scientific mysteries, Elemix is your gateway to an immersive, hands-on learning adventure.
+
+<br> <br>Ready to unleash the endless possibilities of STEM education? Dive in to Elemix today and let the adventure unfold!
     </div>
 
 
