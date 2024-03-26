@@ -186,9 +186,11 @@
         }
         else{
             //catch null combinations
-            echo "el_1: $el_1, el_2: $el_2, sub_1: $sub_1, sub_2: $sub_2<br>";
+            if(isset($_POST['element_result'])){
             echo '<script>
+                alert("Combination Unavailable")
+            </script>'; 
+            }
 
-            </script>';
         }
    ?>
