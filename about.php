@@ -20,6 +20,7 @@
         <a class="position-absolute translate-middle-x" id="back_button" href="index.php" style="text-decoration:none;">🡠</a>      
         <img src="assets/image/elemix logo.png" alt="">
     </section>  
+    <div class="container">
 
 
     <div class=" preface d-flex justify-content-center align-items-center" style="Margin: 10%; Font-family: Arial; text-align: center">
