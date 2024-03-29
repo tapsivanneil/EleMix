@@ -23,10 +23,16 @@
         <a class="position-absolute translate-middle-x" id="back_button" href="index.php" style="text-decoration:none;">🡠</a>      
         <img src="assets/image/elemix logo.png" alt="">
     </section>  
-    <div class="position-relative preface d-flex justify-content-center align-items-center">
-        <section class="position-relative d-flex justify-content-center align-items-center" id="animation_container">
-            <img src="" id="animation" alt="" class="m-0 p-0 ">
-        </section>
+    <div class="position-relative preface justify-content-center align-items-center">
+        <div style="display: flex; flex-direction: column;">
+            <section class="position-relative d-flex justify-content-center align-items-center" id="animation_container">
+                <img src="" id="animation" alt="" class="m-1 p-0 ">
+                
+            </section>
+            <div style=" width: 100%; max-width: 500px; heigth: 100%; min-height: 300px; margin: auto; text-align: center; display: none;" id="description_container">
+                <img src="" alt="" id="description" style="margin-top: 200px; width: 100%; height: 100%">
+            </div>
+        </div>
         <div class="container-fluid px-0 position-absolute translate-middle-y start-25 top-50 "> <!--position-absolute translate-middle-y start-25 top-50-->
             <div class="row p-0 m-0 h-100">
                 <div class="col-lg-6 p-0 mb-5" id="controls">
@@ -139,7 +145,7 @@
         //echo '<script>alert("'.$el_1 .' '.$el_2.'");</script>';
 
        
-        $stmt = $link->prepare("SELECT source 
+        $stmt = $link->prepare("SELECT source, combination 
                                 FROM combinations 
                                 WHERE element_1 = ? 
                                 AND element_2 = ? 
@@ -152,6 +158,8 @@
         if($result->num_rows > 0){
             $element_res = $result->fetch_assoc();
             $element_source =  strtolower($element_res['source']) ;
+            $description_source =  strtolower($element_res['combination']) ;
+
 
             echo '<script>                
                 var controls = document.getElementById("controls");
@@ -163,6 +171,8 @@
                 document.getElementById("animation_container").style.width="100%";
                 document.getElementById("animation_container").style.height="100%";
 
+                document.getElementById("description_container").style.display="";
+
                 var el_1 = document.getElementById("element_1");
                 var el_2 = document.getElementById("element_2");
 
@@ -172,10 +182,15 @@
                 console.log("'.$element_source.'");  
 
                 var animation_holder = document.getElementById("animation");
+                var description_holder = document.getElementById("description");
+
+
                 animation_holder.style.display = "inline";
                 animation_holder.src =  "'.$element_source.'";
                 animation_holder.alt =  "'.$element_source.'";
 
+                description_holder.src =  "assets/image/'.$description_source.'.png";
+                description_holder.alt =  "assets/image/'.$description_source.'.png";
                 
                 var back_button = document.getElementById("back_button");
                 back_button.href =  "elemix.php";
