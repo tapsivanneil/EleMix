@@ -14,6 +14,16 @@
     <script src="js/script.js"> </script>
     <title>EleMix</title>
 </head>
+
+<style>
+        body {
+            background-image: url("assets/image/background.png");
+            background-size: 100% auto; /* Adjust as needed */
+            background-position: center; 
+            background-repeat: repeat; 
+        }
+    </style> 
+
 <body class="p-0 m-0 position-relative d-flex flex-column ">
     <section class="fixed-top position-relative">  
         <!-- <span class="position-absolute translate-middle-x">&#8592;</span>       -->
