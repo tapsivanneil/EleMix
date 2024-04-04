@@ -11,10 +11,21 @@
     <link rel="stylesheet" href="index.css">
     <title>EleMix</title>
 </head>
-<body class="container-fluid">
+
+    <style>
+        body {
+            background-image: url("assets/image/background.png");
+            background-size: 100% auto; /* Adjust as needed */
+            background-position: center; 
+            background-repeat: repeat; 
+        }
+    </style> 
+
+<body class="container-fluid" >
     <img src="assets/image/elemix logo-crp.png" alt="">
     <div class="buttons">
-        <button onclick="window.location.href='elemix.php'">START</button>        
+        <button onclick="window.location.href='elemix.php'">START</button>
+        <button onclick="window.location.href='guide.php'">GUIDE</button>        
         <button onclick="window.location.href='about.php'">ABOUT</button>
     </div>    
     <footer></footer>
