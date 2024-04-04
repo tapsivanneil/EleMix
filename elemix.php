@@ -1,5 +1,5 @@
 <?php 
-    require_once "config/config.php";
+    require_once "config/config_online.php";
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,9 @@
     <script src="js/script.js"> </script>
     <title>EleMix</title>
 </head>
-<body class="p-0 m-0 position-relative d-flex flex-column ">
+
+<body class="p-0 m-0 position-relative d-flex flex-column">
+
     <section class="fixed-top position-relative">  
         <!-- <span class="position-absolute translate-middle-x">&#8592;</span>       -->
         <a class="position-absolute translate-middle-x" id="back_button" href="index.php" style="text-decoration:none;">🡠</a>      
@@ -30,7 +32,7 @@
                 
             </section>
             <div style=" width: 100%; max-width: 500px; heigth: 100%; min-height: 300px; margin: auto; text-align: center; display: none;" id="description_container">
-                <img src="" alt="" id="description" style="margin-top: 200px; width: 100%; height: 100%">
+                <img src="" alt="" id="description" style="margin-top: 30px; width: 100%; height: 100%">
             </div>
         </div>
         <div class="container-fluid px-0 position-absolute translate-middle-y start-25 top-50 "> <!--position-absolute translate-middle-y start-25 top-50-->
@@ -40,22 +42,22 @@
                         <div class="d-flex justify-content-around align-items-center" id="combination_holder">  
                             <div class="element-container position-relative justify-content-center">
                                 <button class="element_btn " onclick="setElementFocus(1)" name="element_1" id="element_1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
-                                    Cd
+                                    Hg
                                 </button>
-                                <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1 rounded-circle" value="1">
+                                <input oninput="getResult()" name="subscript_1" id="subscript_1" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1 rounded-circle" value="2">
                             </div>                
     
                             <div class="plus pb-3">+</div>
     
                             <div class="element-container position-relative">
                                 <button class="element_btn " onclick="setElementFocus(2)" name="element_2" id="element_2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" type="button" aria-controls="offcanvasExample">
-                                    S
+                                    O
                                 </button>
-                                <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1 rounded-circle" value="-1">
+                                <input oninput="getResult()" name="subscript_2" id="subscript_2" type="number" class="position-absolute top-100 end-0 translate-middle text-center border border-black border-1 rounded-circle" value="-2">
                             </div>  
                             <input type="hidden" name="element_result" id="element_result">
-                            <input type="hidden" name="element_1_search" id="element_1_search" value="Cd">
-                            <input type="hidden" name="element_2_search" id="element_2_search" value="S">
+                            <input type="hidden" name="element_1_search" id="element_1_search" value="Hg">
+                            <input type="hidden" name="element_2_search" id="element_2_search" value="O">
     
                         </div>           
                                 
