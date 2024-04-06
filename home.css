@@ -3,11 +3,36 @@
   src: url("assets/font/Chewy-Regular.woff") format("woff"),
     url("assets/font/Chewy-Regular.woff2") format("woff2");
 }
+
+.elemix-guide {
+  background-color: white;
+  /* background-color: rgb(255, 228, 152); */
+  border: none; /* Remove border */
+  outline: none;
+  width: 40px; /* Adjust width and height as needed */
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: 4%;
+}
+
+.combination-btn {
+  background-color: #ba2d11;
+  border: none; /* Remove border */
+  outline: none;
+  color: white;
+  font-family: "Chewy";
+  width: 100%;
+  font-size: 200%;
+}
+
 .plus {
   position: absolute;
   font-family: "Chewy";
   font-size: 80px;
   color: #e73813;
+  border: none; /* Remove border */
+  outline: none;
 }
 html,
 body {
@@ -28,18 +53,29 @@ body {
   align-items: center;
   position: relative;
 }
+
+.superscript {
+  width: 5%;
+  height: 100%; /* Ensuring height is the same as width to create a perfect circle */
+  background-color: rgb(255, 228, 152);
+  border-radius: 50%; /* Making it a circle */
+}
+
 #subscript_1,
-#subscript_2  {
+#subscript_2 {
+  margin-left: -12%;
+  margin-top: -10%;
   z-index: 1000 !important;
   font-family: "Chewy";
   font-size: 130%;
-  width: 24%;
-  height: 50%;
+  width: 40px;
+  height: 40px;
   text-align: center;
   border-radius: 50% !important;
+  line-height: 40px;
 }
 input {
-  font-family: 'Chewy';
+  font-family: "Chewy";
 }
 #subscript_1,
 #subscript_2 {
@@ -63,7 +99,7 @@ input.mix-btn {
   height: 100%;
   font-size: 200%;
   padding: 0%;
-  transition: .2s ease-in 0s;
+  transition: 0.2s ease-in 0s;
 }
 
 .offcanvas-btn {
@@ -120,6 +156,7 @@ img {
   column-gap: 4%;
   row-gap: 2%;
 }
+
 .offcanvas,
 .offcanvas-xxl,
 .offcanvas-xl,
@@ -155,17 +192,17 @@ input::-webkit-inner-spin-button {
 }
 .preface {
   height: 90%;
-  animation: myAnim .7s ease 0s 1 normal forwards;
+  animation: myAnim 0.7s ease 0s 1 normal forwards;
 }
 @keyframes myAnim {
   0% {
-      opacity: 0;
-      transform: scale(0.6);
+    opacity: 0;
+    transform: scale(0.6);
   }
 
   100% {
-      opacity: 1;
-      transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 /* Media queries */
