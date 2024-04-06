@@ -50,7 +50,7 @@ INSERT INTO `combinations` (`id`, `element_1`, `subscript_1`, `element_2`, `subs
 (5, 'Ag', 1, 'Cl', -1, 'AgCl', 'Silver Chloride', 'assets/gif/AgCl.gif'),
 (6, 'Hg', 2, 'O', -2, 'HgO', 'Mercuric Oxide', 'assets/gif/HgO.gif'),
 (7, 'Pb', 2, 'I', 1, 'PbI2', 'Lead Iodide', 'assets/gif/PbI2.gif'),
-(8, 'N', 2, 'Cl', -1, 'NiCl2', 'Nickel Chloride', 'assets/gif/NiCl2.gif'),
+(8, 'Ni', 2, 'Cl', -1, 'NiCl2', 'Nickel Chloride', 'assets/gif/NiCl2.gif'),
 (9, 'P', 5, 'Br', -1, 'PBr5', 'Phosporus Pentabromide', 'assets/gif/PBr5.gif'),
 (10, 'Cd', 2, 'Se', -2, 'CdSe', 'Ammonia', 'assets/gif/CdSe.gif');
 
@@ -71,34 +71,16 @@ CREATE TABLE `elements` (
 --
 
 INSERT INTO `elements` (`id`, `symbol`, `element_name`) VALUES
-(1, 'N', 'Nitrogen'),
-(2, 'H', 'Hydrogen'),
-(3, 'Al', 'Aluminum'),
-(4, 'Br', 'Bromine'),
-(5, 'Cl', 'Chlorine'),
-(6, 'O', 'Oxygen'),
-(7, 'F', 'Fluorine'),
-(8, 'S', 'Sulfur'),
-(9, 'I', 'Iodine'),
-(10, 'Ba', 'Barium'),
-(11, 'Ca', 'Calcium'),
-(12, 'C', 'Carbon'),
-(13, 'Cd', 'Cadmium'),
-(14, 'P', 'Phosphorus'),
-(15, 'K', 'Potassium'),
-(16, 'Se', 'Selenium'),
-(17, 'Na', 'Sodium'),
-(18, 'Ag', 'Silver'),
-(19, 'Sr', 'Strontium'),
-(20, 'Zn', 'Zinc'),
-(21, 'Fe', 'Iron'),
-(22, 'As', 'Arsenic'),
-(23, 'Mg', 'Magnesium'),
-(24, 'Ni', 'Nickel'),
-(25, 'Ti', 'Titanium'),
-(26, 'Co', 'Cobalt'),
-(27, 'Hg', 'Mercury'),
-(28, 'Pb', 'Lead');
+(1, 'AlBr3', 'Aluminum Bromide'),
+(2, 'CdS', 'Cadmium Sulfide'),
+(3, 'HCl', 'Hydrochloric Acid'),
+(4, 'NaCl', 'Sodium Chloride'),
+(5, 'AgCl', 'Silver Chloride'),
+(6, 'HgO', 'Mercuric Oxide'),
+(7, 'PbI2', 'Lead Iodide'),
+(8, 'NiCl2', 'Nickel Chloride'),
+(9, 'PBr5', 'Phosphorus Pentabromide'),
+(10, 'CdSe', 'Cadmium Selenide');
 
 --
 -- Indexes for dumped tables
