@@ -11,7 +11,6 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>    
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="js/script.js"> </script>
     <title>EleMix</title>
 </head>
 
@@ -47,4 +46,12 @@
 
 
 </body>
+
+<audio id="bgm" controls autoplay loop>
+  <source src="assets/mp3/elemix_bgm.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script src="js/script.js"> </script>
+
 </html>

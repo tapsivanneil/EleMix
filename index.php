@@ -30,4 +30,14 @@
     </div>    
     <footer></footer>
 </body>
+
+<audio id="bgm" autoplay loop>
+  <source src="assets/mp3/elemix_bgm.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script> 
+    var audio = document.getElementById("bgm");
+    audio.volume = 0.01;
+</script>
 </html>
