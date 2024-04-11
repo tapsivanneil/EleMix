@@ -43,16 +43,16 @@ CREATE TABLE `combinations` (
 --
 
 INSERT INTO `combinations` (`id`, `element_1`, `subscript_1`, `element_2`, `subscript_2`, `combination`, `combination_name`, `source`) VALUES
-(1, 'Al', 3, 'Br', -1, 'AlBr3', 'Aluminum Bromide', 'assets/gif/AlBr3.gif'),
-(2, 'Cd', 1, 'S', -1, 'CdS', 'Cadium Sulfide', 'assets/gif/CdS.gif'),
-(3, 'H', 1, 'Cl', -1, 'HCl', 'Hydrochloric Acid', 'assets/gif/HCl.gif'),
-(4, 'Na', 1, 'Cl', -1, 'NaCl', 'Sodium Chloride', 'assets/gif/NaCl.gif'),
-(5, 'Ag', 1, 'Cl', -1, 'AgCl', 'Silver Chloride', 'assets/gif/AgCl.gif'),
-(6, 'Hg', 2, 'O', -2, 'HgO', 'Mercuric Oxide', 'assets/gif/HgO.gif'),
-(7, 'Pb', 2, 'I', 1, 'PbI2', 'Lead Iodide', 'assets/gif/PbI2.gif'),
-(8, 'Ni', 2, 'Cl', -1, 'NiCl2', 'Nickel Chloride', 'assets/gif/NiCl2.gif'),
-(9, 'P', 5, 'Br', -1, 'PBr5', 'Phosporus Pentabromide', 'assets/gif/PBr5.gif'),
-(10, 'Cd', 2, 'Se', -2, 'CdSe', 'Ammonia', 'assets/gif/CdSe.gif');
+(1, 'Al', 3, 'Br', -1, 'AlBr3', 'Aluminum Bromide', 'assets/mp4/AlBr3.mp4'),
+(2, 'Cd', 1, 'S', -1, 'CdS', 'Cadium Sulfide', 'assets/mp4/CdS.mp4'),
+(3, 'H', 1, 'Cl', -1, 'HCl', 'Hydrochloric Acid', 'assets/mp4/HCl.mp4'),
+(4, 'Na', 1, 'Cl', -1, 'NaCl', 'Sodium Chloride', 'assets/mp4/NaCl.mp4'),
+(5, 'Ag', 1, 'Cl', -1, 'AgCl', 'Silver Chloride', 'assets/mp4/AgCl.mp4'),
+(6, 'Hg', 2, 'O', -2, 'HgO', 'Mercuric Oxide', 'assets/mp4/HgO.mp4'),
+(7, 'Pb', 2, 'I', 1, 'PbI2', 'Lead Iodide', 'assets/mp4/PbI2.mp4'),
+(8, 'Ni', 2, 'Cl', -1, 'NiCl2', 'Nickel Chloride', 'assets/mp4/NiCl2.mp4'),
+(9, 'P', 5, 'Br', -1, 'PBr5', 'Phosporus Pentabromide', 'assets/mp4/PBr5.mp4'),
+(10, 'Cd', 2, 'Se', -2, 'CdSe', 'Ammonia', 'assets/mp4/CdSe.mp4');
 
 -- --------------------------------------------------------
 
