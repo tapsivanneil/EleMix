@@ -14,7 +14,6 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>    
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="js/script.js"> </script>
     <title>EleMix</title>
 </head>
 
@@ -34,7 +33,7 @@
     <div class="position-relative preface justify-content-center align-items-center">
         <div style="display: flex; flex-direction: column;">
             <section class="position-relative d-flex justify-content-center align-items-center" id="animation_container">
-                <img src="" id="animation" alt="" class="m-1 p-0 ">
+                <video autoplay loop controls src="" id="animation" alt="" class="m-1 p-0 ">
                 
             </section>
             <div style=" width: 100%; max-width: 500px; heigth: 100%; min-height: 300px; margin: auto; text-align: center; display: none;" id="description_container">
@@ -80,11 +79,11 @@
     </div>
 
 <!-- offcanvas  -->
-        <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas offcanvas-bottom pt-1" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
 
             <div class="offcanvas-body position-relative pt-3 mb-2" id="liveSearchResults">                 
 
-                <div class="button-container px-3 ">
+                <div class="button-container">
                     <?php 
                     if(isset($_POST['element_submit'])){
                         $element_1_search = isset($_POST['element_1_search']) ? $_POST['element_1_search'] : 'Na';
@@ -115,7 +114,7 @@
                             $element_name = $element['combination_name'];
 
                             echo '
-                                <button onclick="setElementName( \'' . $element_1 . '\', \'' . $element_2 . '\',\'' . $subscript_1 . '\',\'' . $subscript_2 . '\')"  getResult(); class="offcanvas-btn d-flex flex-column justify-content-center align-items-center mx-auto">
+                                <button onclick="setElementName( \'' . $element_1 . '\', \'' . $element_2 . '\',\'' . $subscript_1 . '\',\'' . $subscript_2 . '\')"  getResult(); class="offcanvas-btn d-flex flex-column justify-content-center align-items-center mx-auto mt-2">
                                     <span class="symbol">' . $element_symbol . '</span>
                                     <span class="element-name">' . $element_name . '</span>
                                 </button>';
@@ -127,7 +126,7 @@
             </div>
         </div>
 
-<div style="display: flex">
+<div style="display: flex" id="combination_btn">
     <button class="combination-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
   Combinations
 </button>
@@ -176,12 +175,19 @@
 
     </div>
 
-
-
 </div>
 
 </body>
+
+<audio id="bgm" controls autoplay loop>
+  <source src="assets/mp3/elemix_bgm.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 </html>
+
+<script src="js/script.js"> </script>
+
 <?php
         $el_1 = isset($_POST['element_1_search']) ? $_POST['element_1_search'] : "";
         $el_2 = isset($_POST['element_2_search']) ? $_POST['element_2_search'] : "";
@@ -206,7 +212,11 @@
             $description_source =  strtolower($element_res['combination']) ;
 
 
-            echo '<script>                
+            echo '<script>  
+            
+                var combination_btn = document.getElementById("combination_btn");
+                combination_btn.style.display = "none";
+
                 var controls = document.getElementById("controls");
                 controls.style.display = "none";
                 
