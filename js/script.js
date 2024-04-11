@@ -41,6 +41,4 @@ const getResult = () => {
 };
 
 var audio = document.getElementById("bgm");
-audio.volume = 0.1;
-
-console.log(audio.volume);
+audio.volume = 0.01;

@@ -179,7 +179,7 @@
 
 </body>
 
-<audio id="bgm" controls autoplay loop>
+<audio id="bgm" autoplay loop>
   <source src="assets/mp3/elemix_bgm.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
@@ -213,7 +213,10 @@
 
 
             echo '<script>  
-            
+
+                var audio = document.getElementById("bgm");
+                audio.volume = 0;
+
                 var combination_btn = document.getElementById("combination_btn");
                 combination_btn.style.display = "none";
 
@@ -239,6 +242,7 @@
                 var animation_holder = document.getElementById("animation");
                 var description_holder = document.getElementById("description");
 
+                animation_holder.volume = 0.01;
 
                 animation_holder.style.display = "inline";
                 animation_holder.src =  "'.$element_source.'";
